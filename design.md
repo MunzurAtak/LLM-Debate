@@ -26,8 +26,8 @@ Groep 3–8
 - Leestekens
 
 ### 0.5 Question Types
-- Meerkeuzevraag
-- Korte open vraag (Alleen rekenen)
+- Multiple choice
+- Short answer
 
 ### 0.6 Difficulty Levels
 - Midden
