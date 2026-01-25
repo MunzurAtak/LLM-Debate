@@ -32,3 +32,30 @@ Groep 3–8
 ### 0.6 Difficulty Levels
 - Midden
 - Eind
+
+
+## Domain Modules
+
+### Rekenen Module
+Responsibilities:
+- Interpret difficulty relative to grade (3–8)
+- Enforce rekenen-specific constraints
+- Select appropriate subskills
+- Generate mathematically valid questions
+
+Owned concepts:
+- Arithmetic rules
+- Grade-level numerical limits
+- Step-by-step solutions
+
+### Taal Module
+Responsibilities:
+- Interpret difficulty relative to grade
+- Enforce language complexity
+- Select appropriate linguistic subskills
+
+Submodules:
+- Begrijpend lezen
+- Spelling
+- Woordenschat
+- Leestekens
