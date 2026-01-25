@@ -33,8 +33,22 @@ Groep 3–8
 - Midden
 - Eind
 
+## 1. System Architecture
 
-## Domain Modules
+### 1.1 Global Controller
+
+The Global Controller is responsible for:
+- Receiving structured input parameters (domain, grade, difficulty, subskill, question_type)
+- Validating inputs against the global scope
+- Routing the request to the appropriate domain module
+- Enforcing the universal output schema
+
+The Global Controller does not:
+- Contain domain-specific knowledge
+- Decide difficulty semantics
+- Generate content directly
+
+### 1.2 Domain Modules
 
 ### Rekenen Module
 Responsibilities:
@@ -59,3 +73,25 @@ Submodules:
 - Spelling
 - Woordenschat
 - Leestekens
+
+### 1.3 Routing Logic
+
+- All requests pass through the Global Controller
+- The domain parameter determines which module is activated
+- Subdomain handling occurs within the selected domain module
+- Outputs are normalized to the universal schema
+
+### 1.4 Explicit Non-Goals
+
+The system explicitly does not attempt to:
+- Model individual students
+- Adapt difficulty dynamically
+- Score real student answers
+- Replace official CITO assessments
+
+## Language Policy
+
+- All system design, code, schemas, and evaluation are written in English.
+- All LLM prompts instruct the model to respond in Dutch.
+- All generated questions and solutions must be in Dutch.
+- Language complexity must be appropriate to the specified grade.
