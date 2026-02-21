@@ -1,3 +1,7 @@
 .venv/
 __pycache__/
 *.pyc
+
+# Debate output logs — generated at runtime, not source code
+outputs/*
+!outputs/.gitkeep

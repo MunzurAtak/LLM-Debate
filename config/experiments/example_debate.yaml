@@ -1,0 +1,29 @@
+# -----------------------------------------------------------------------
+# Example experiment config.
+# Every parameter that controls a debate run lives here.
+# Change this file — not source code — to run a different experiment.
+# -----------------------------------------------------------------------
+
+experiment:
+  name: "example_debate"
+  seed: 42                          # Controls reproducibility across the whole run
+  rounds: 3                         # How many back-and-forth exchanges happen
+  topic: "Is universal basic income beneficial for society?"
+
+model:
+  backend: "ollama"                 # Which LLM backend class to use
+  name: "llama3.2:3b"              # Ollama model tag — must be pulled locally
+  host: "http://localhost:11434"    # Ollama server address
+
+generation:
+  temperature: 0.7                  # Higher = more varied outputs
+  max_tokens: 300                   # Max tokens per agent response
+
+agents:
+  - id: "agent_a"
+    persona_path: "config/personas/utilitarian.yaml"
+  - id: "agent_b"
+    persona_path: "config/personas/libertarian.yaml"
+
+logging:
+  output_dir: "outputs/"            # Where debate JSON logs are written
